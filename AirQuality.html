@@ -29,7 +29,7 @@
         		}
       #navigation li a:hover {
         		margin-top: 2px;
-						}
+        						}
       #navigation_container {
    					margin: 0 auto;
    					width: 960px;
@@ -63,6 +63,17 @@
            	border-radius: 3px;
            	z-index: 500; /* the stack order: foreground */
            	}
+      .bg {/* The image used */
+    				background-image: url("https://snazzy-maps-cdn.azureedge.net/assets/1243-xxxxxxxxxxx.png?v=20170626083204");
+
+    /* Full height */
+    				height: 100%; 
+
+    /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+						}
 						
 		</style>
 	</head>
@@ -71,10 +82,11 @@
 		<div class="rectangleh1">
     <h1>Air Quality Prediction Tool</h1>
     </div>
-    <br>
-		<br>
-    <br>
-    
+    <img src="https://snazzy-maps-cdn.azureedge.net/assets/1243-xxxxxxxxxxx.png?v=20170626083204" 
+         alt="Map"
+         width=100%
+         hight=100%>
+        
 		<div id="navigation_container">
       
       <div class="rectangle">
@@ -82,8 +94,8 @@
 <!-- the navigation links -->
  
    		<ul id="navigation">
-      		<li><a href="#"> link 1</a></li>
-      		<li><a href="#"> link 2</a></li>
+      		<li><a href="#"> Buffer Distane</a></li>
+      		<li><a href="#"> Day to Predict</a></li>
       		<li><a href="#"> link 3</a></li>
       		<li><a href="#"> link 4</a></li>
    		</ul>
