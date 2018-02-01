@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Air Quality Prediction Tool</title>
+		<style>
+			body {background-color: powderblue;}
+			h1   {color: black;
+  				  font-family: optima;
+  			    font-size: 50px;
+						font-style: normal;
+						font-variant: normal;
+						font-weight: 500;
+						line-height: 26.4px;
+      		 }
+			p    {color: red;}
+      #navigation li {
+        		list-style: none;
+        		display: block;
+       		  float: left;
+        		margin: 0em;
+						}
+      #navigation li a {
+        		text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+       	 		display: block;
+        		text-decoration: none;
+        		color: #f0f0f0;
+        		font-size: 1.6em;
+        		margin: 0 .5em;
+        		}
+      #navigation li a:hover {
+        		margin-top: 2px;
+        						}
+      #navigation_container {
+   					margin: 0 auto;
+   					width: 960px;
+						}
+      .rectangle {
+   					background: #64b5f6;
+           	height: 62px;
+        		width: 100%;   	
+        		position: absolute;
+        		bottom: 0;
+        		left: 0;
+           	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+           	box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+           	-webkit-border-radius: 3px;
+           	-moz-border-radius: 3px;
+           	border-radius: 3px;
+           	z-index: 500; /* the stack order: foreground */
+           	margin: 3em 0;
+						}
+      .rectangleh1 {
+   					background: #64b5f6;
+           	height: 95px;
+        		width: 100%;
+       			top: 0;
+        		left: 0;
+        		position: absolute;
+           	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+           	box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+           	-webkit-border-radius: 3px;
+           	-moz-border-radius: 3px;
+           	border-radius: 3px;
+           	z-index: 500; /* the stack order: foreground */
+           	}
+      .bg {/* The image used */
+    				background-image: url("https://snazzy-maps-cdn.azureedge.net/assets/1243-xxxxxxxxxxx.png?v=20170626083204");
+
+    /* Full height */
+    				height: 100%; 
+
+    /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+						}
+						
+		</style>
+	</head>
+	
+	<body>
+		<div class="rectangleh1">
+    <h1>Air Quality Prediction Tool</h1>
+    </div>
+    <img src="https://snazzy-maps-cdn.azureedge.net/assets/1243-xxxxxxxxxxx.png?v=20170626083204" 
+         alt="Map"
+         width=100%
+         hight=100%>
+        
+		<div id="navigation_container">
+      
+      <div class="rectangle">
+ 
+<!-- the navigation links -->
+ 
+   		<ul id="navigation">
+        <li><a href="#"> 
+          	<form>
+              Buffer Distane <input type="number" name="bufferdistance"> 
+          	</form>
+        </a></li>
+      		
+        <li><a href="#">
+            <form>
+              Prediction Date <input type="date" name="date"> 
+          	</form>
+        </a></li>
+        
+        <li><a href="#"> <button type="button"> Info </button>
+        </a></li>
+        
+   		</ul>
+      </div>
+<!-- end container -->
+		</div>
+    
+	</body>
+	
+	
+</html>
