@@ -3,7 +3,7 @@
 	<head>
 		<title>Air Quality Prediction Tool</title>
 		<style>
-			body {background-color: powderblue;}
+			body {background-color: #64b5f6;}
 			h1   {color: black;
   				  font-family: optima;
   			    font-size: 50px;
@@ -74,26 +74,30 @@
             background-repeat: no-repeat;
             background-size: cover;
 						}
-      .popup {
-    position: absolute;
-    bottom: 0;
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
     display: inline-block;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-  /* The actual popup (appears on top) */
+/* The actual popup */
 .popup .popuptext {
     visibility: hidden;
-    width: 160px;
+    width: 500px;
     background-color: #555;
     color: #fff;
-    text-align: center;
+    text-align: left;
     border-radius: 6px;
     padding: 8px 0;
     position: absolute;
     z-index: 1;
-    bottom: 50%;
-    left: 50%;
-    margin-left: -80px;
+    bottom: 500%;
+    left: -800%;
+    margin-left: -200px;
 }
 
 /* Popup arrow */
@@ -106,7 +110,7 @@
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-}
+    }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
@@ -125,34 +129,43 @@
     from {opacity: 0;}
     to {opacity:1 ;}
 }
+      th {
+    text-align: left;
+}
 						
 		</style>
 	</head>
 	
 	<body>
-		<div class="rectangleh1">
+		<table style="width:100%">
+      <tr>
+        <th>
+    <div class="rectangleh1">
     <h1>Air Quality Prediction Tool</h1>
     </div>
     <!-- <img src="https://snazzy-maps-cdn.azureedge.net/assets/1243-xxxxxxxxxxx.png?v=20170626083204" 
          alt="Map"
          width=100%
          hight=100%> -->
-<!--Google Map -->
+        </th><th></th></tr>
+    </table>
+    
+    <!--Google Map -->
 <h1>My First Google Map</h1>
 
-<div id="map" style="width:400px;height:400px;background:yellow"></div>
+<div id="map" style="width:100%;height:670px;background:yellow"></div>
 
 <script>
 function myMap() {
   var mapCanvas = document.getElementById("map");
   var mapOptions = {
-    center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+    center: new google.maps.LatLng(40.259, -111.7254), zoom: 10
   };
   var map = new google.maps.Map(mapCanvas, mapOptions);
 }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFMLPHP_UrmQ1LYt4Lg5MziHyYu1mCgek&callback=myMap"></script>
 <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
@@ -164,20 +177,24 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
  
 <!-- the navigation links -->
  
-   		<ul id="navigation">
-        <li><a href="#"> 
-          	<form>
+   		<table style="width:100%; text-shadow: 0 2px 1px rgba(0,0,0,0.5);
+       	 		text-decoration: none;
+        		color: #f0f0f0;
+        		font-size: 1.6em;
+        		margin: 0 .6em">
+  <tr>
+    <th>
+    <form>
               Buffer Distance <input type="number" name="bufferdistance"> 
           	</form>
-        </a></li>
-      		
-        <li><a href="#">
-            <form>
+            </th>
+    <th>
+    <form>
               Prediction Date <input type="date" name="date"> 
           	</form>
-        </a></li>
-        
-        <li><a href="#"> <div class="popup" onclick="myFunction()"> Info
+            </th> 
+    <th>
+    <a href="#"> <div class="popup" onclick="myFunction()"> Info
   						<span class="popuptext" id="myPopup"> 
           <h1>Instructions</h1>
                 <p>This tool helps predict the air quality for Utah Valley.</p>
@@ -193,9 +210,10 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
           
           </span>
           							</div>
-        </a></li>
-        
-   		</ul>
+        </a>
+        </th>
+        </tr>
+</table> 		
       </div>
 <!-- end container -->
 		</div>
